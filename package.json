@@ -10,11 +10,18 @@
     "type": "git",
     "url": "git+https://github.com/kmisha/design-patterns.git"
   },
-  "keywords": ["JavaScript", "Disign patterns", "Jamine"],
+  "keywords": [
+    "JavaScript",
+    "Disign patterns",
+    "Jamine"
+  ],
   "author": "Michael Kolesnikov",
   "license": "MIT License",
   "bugs": {
     "url": "https://github.com/kmisha/design-patterns/issues"
   },
-  "homepage": "https://github.com/kmisha/design-patterns#readme"
+  "homepage": "https://github.com/kmisha/design-patterns#readme",
+  "devDependencies": {
+    "jasmine": "^3.5.0"
+  }
 }
