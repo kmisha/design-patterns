@@ -29,8 +29,8 @@ describe('Subject', () => {
         const subscription = sub.on(second)
 
         subscription()
-        sub.notify(5)
+        sub.notify(6)
 
-        expect(result).toEqual([5])
+        expect(result).toEqual([6])
     })
 })

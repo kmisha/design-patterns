@@ -1,13 +1,7 @@
 module.exports = {
     observers_: new Set(),
     notify: function (payload) {
-        this.observers_.forEach(callback => {
-            try {
-                callback(payload)
-            } catch {
-                //
-            }
-        })
+        this.observers_.forEach(callback => callback(payload))
     },
     on: function (callback) {
         if (typeof callback !== 'function') throw 'Callback should be a function'
