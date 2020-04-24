@@ -1,10 +1,11 @@
 const subject = require('./observer')
+const clone = require('lodash/cloneDeep')
 
 describe('Subject', () => {
     let sub;
     beforeEach(() => {
         // clone subject
-        sub = Object.create(subject)
+        sub = clone(subject)
     })
 
     it('should create correct subscriptions', () => {
@@ -24,7 +25,7 @@ describe('Subject', () => {
     it('should correct unsubscribe from subscription', () => {
         let result = []
         const first = value => result = [...result, value]
-        const second = value => result = [...result, value]
+        const second = jasmine.createSpy('second')
         sub.on(first)
         const subscription = sub.on(second)
 
@@ -32,5 +33,6 @@ describe('Subject', () => {
         sub.notify(6)
 
         expect(result).toEqual([6])
+        expect(second).not.toHaveBeenCalled()
     })
 })
