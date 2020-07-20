@@ -23,6 +23,6 @@
   "homepage": "https://github.com/kmisha/design-patterns#readme",
   "devDependencies": {
     "jasmine": "^3.5.0",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.19"
   }
 }
